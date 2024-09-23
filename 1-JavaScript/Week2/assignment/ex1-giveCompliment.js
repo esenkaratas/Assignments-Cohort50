@@ -31,7 +31,7 @@ export function giveCompliment(name) {
     'spectacular',
   ];
   const selectedCompliment = compliments[Math.floor(Math.random() * 10)];
-  const compliment = `You are ${selectedCompliment} ${name}!`;
+  const compliment = `You are ${selectedCompliment}, ${name}!`;
   return compliment;
 }
 
