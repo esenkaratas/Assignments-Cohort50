@@ -4,9 +4,10 @@
 
 ### 1-JavaScript - Week2
 
-|      Exercise      | Passed | Failed | ESLint |
-|--------------------|--------|--------|--------|
-| ex1-giveCompliment |   7    |   -    |   ✓    |
-| ex2-dogYears       |   7    |   -    |   ✓    |
-| ex3-tellFortune    |   10   |   -    |   ✓    |
-| ex4-shoppingCart   |   -    |   -    |   ✓    |
+|       Exercise       | Passed | Failed | ESLint |
+|----------------------|--------|--------|--------|
+| ex1-giveCompliment   |   7    |   -    |   ✓    |
+| ex2-dogYears         |   7    |   -    |   ✓    |
+| ex3-tellFortune      |   10   |   -    |   ✓    |
+| ex4-shoppingCart     |   -    |   -    |   ✓    |
+| ex5-shoppingCartPure |   -    |   -    |   ✓    |
