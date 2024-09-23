@@ -17,13 +17,26 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/1-J
    Use `console.log` each time to display the return value of the
    `giveCompliment` function to the console.
 -----------------------------------------------------------------------------*/
-export function giveCompliment(/* TODO parameter(s) go here */) {
-  // TODO complete this function
+export function giveCompliment(name) {
+  const compliments = [
+    'great',
+    'awesome',
+    'fantastic',
+    'beautiful',
+    'incredible',
+    'remarkable',
+    'brilliant',
+    'magnificent',
+    'phenomenal',
+    'spectacular',
+  ];
+  const selectedCompliment = compliments[Math.floor(Math.random() * 10)];
+  const compliment = `You are ${selectedCompliment} ${name}!`;
+  return compliment;
 }
 
 function main() {
-  // TODO substitute your own name for "HackYourFuture"
-  const myName = 'HackYourFuture';
+  const myName = 'Esen';
 
   console.log(giveCompliment(myName));
   console.log(giveCompliment(myName));
