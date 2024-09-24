@@ -11,3 +11,5 @@
 | ex3-tellFortune      |   10   |   -    |   ✓    |
 | ex4-shoppingCart     |   -    |   -    |   ✓    |
 | ex5-shoppingCartPure |   -    |   -    |   ✓    |
+| ex6-totalCost        |   -    |   -    |   ✓    |
+| ex7-mindPrivacy      |   -    |   -    |   ✓    |
