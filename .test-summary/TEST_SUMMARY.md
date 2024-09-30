@@ -8,3 +8,4 @@
 |----------------------------|--------|--------|--------|
 | ex1-doubleEvenNumbers.test |   1    |   -    |   ✓    |
 | ex2-mondaysWorth.test      |   2    |   -    |   ✓    |
+| ex3-lemonAllergy.test      |   3    |   -    |   ✓    |
