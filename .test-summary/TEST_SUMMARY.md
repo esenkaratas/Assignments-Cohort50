@@ -7,3 +7,4 @@
 |          Exercise          | Passed | Failed | ESLint |
 |----------------------------|--------|--------|--------|
 | ex1-doubleEvenNumbers.test |   1    |   -    |   ✓    |
+| ex2-mondaysWorth.test      |   2    |   -    |   ✓    |
