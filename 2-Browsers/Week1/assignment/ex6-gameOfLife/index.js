@@ -91,13 +91,6 @@ export function createGame(context, numRows, numColumns) {
     if (cell.alive) {
       // Draw living cell inside background
       let opacity;
-      if (cell.lifeTime > 0) {
-        opacity = 1;
-      } else if (cell.lifeTime === 0) {
-        opacity = 0.5;
-      } else {
-        opacity = 0;
-      }
 
       context.fillStyle = `rgba(24, 215, 236, ${opacity})`;
       context.fillRect(
