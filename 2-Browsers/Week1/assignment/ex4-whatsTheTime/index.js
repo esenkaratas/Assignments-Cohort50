@@ -21,3 +21,4 @@ function addCurrentTime() {
   setInterval(updateTime, 1000);
   updateTime();
 }
+window.addEventListener('DOMContentLoaded', addCurrentTime);
