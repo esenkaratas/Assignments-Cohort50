@@ -36,6 +36,7 @@ function createBookList(books) {
     const imgElement = document.createElement('img');
     const imageName = book.title.toLowerCase().split(' ').join('_');
     imgElement.src = `/assets/${imageName}.jpg`;
+    imgElement.alt = `Cover of ${book.title}`;
     liElement.appendChild(imgElement);
 
     if (book.alreadyRead) {

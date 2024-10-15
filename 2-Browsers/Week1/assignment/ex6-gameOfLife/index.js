@@ -17,7 +17,7 @@ const NUM_ROWS = 40;
  * @property {number} y
  * @property {boolean} alive
  * @property {boolean} [nextAlive]
- * @property {number} [lifeTime]
+ * @property {number} lifeTime
  */
 
 /** @typedef {GridCell[]} GridRow */
@@ -91,6 +91,11 @@ export function createGame(context, numRows, numColumns) {
     if (cell.alive) {
       // Draw living cell inside background
       let opacity;
+      if (cell.lifeTime >= 4) {
+        opacity = 1;
+      } else {
+        opacity = cell.lifeTime * 0.25;
+      }
 
       context.fillStyle = `rgba(24, 215, 236, ${opacity})`;
       context.fillRect(
@@ -160,6 +165,11 @@ export function createGame(context, numRows, numColumns) {
 
     // Apply the newly computed state to the cells
     forEachCell((cell) => {
+      if (cell.nextAlive) {
+        cell.lifeTime = cell.alive ? cell.lifeTime + 1 : 1;
+      } else {
+        cell.lifeTime = 0;
+      }
       cell.alive = cell.nextAlive ?? false;
     });
   }
