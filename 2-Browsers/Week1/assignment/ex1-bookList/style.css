@@ -1,1 +1,41 @@
 /* Write your style here */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cbf7e0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.book {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+}
+
+.book img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.book h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.book p {
+  font-size: 0.9em;
+  color: #fefdfd;
+}
