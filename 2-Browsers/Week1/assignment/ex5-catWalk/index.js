@@ -33,7 +33,6 @@ function catWalk() {
   function moveCat() {
     const currentLeft = parseInt(imgElement.style.left);
     const newLeft = currentLeft + 10;
-    let leftPositionOnMiddle = 0;
     imgElement.style.left = `${newLeft}px`;
     imageWidth = imgElement.width;
 
@@ -46,7 +45,6 @@ function catWalk() {
       newLeft < window.innerWidth / 2 - imageWidth / 2 + 10
     ) {
       imgElement.src = dancingCatUrl;
-      leftPositionOnMiddle = newLeft;
       console.log('Cat is dancing');
       clearInterval(catInterval);
       setTimeout(() => {
