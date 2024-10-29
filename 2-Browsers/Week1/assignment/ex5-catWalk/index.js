@@ -20,34 +20,42 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-window.addEventListener('DOMContentLoaded', () => {
-  function catWalk() {
-    const img = document.querySelector('img');
-    img.style.left = '0px';
+function catWalk() {
+  let catInterval = setInterval(moveCat, 50);
+  const dancingCatUrl =
+    'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+  const walkingCatUrl =
+    'http://www.anniemation.com/clip_art/images/cat-walk.gif';
 
-    let originalCat = img.src;
-    let screenWidth = window.innerWidth;
-    let middleOfScreen = screenWidth / 2;
+  const imgElement = document.querySelector('img');
+  imgElement.style.left = '0px';
 
-    function catWalk() {
-      let currentLeft = parseInt(img.style.left);
-      if (currentLeft > screenWidth) {
-        img.style.left = '0px';
-      } else if (
-        currentLeft >= middleOfScreen - img.width / 2 &&
-        currentLeft <= middleOfScreen + img.width / 2
-      ) {
-        img.src =
-          'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
-        setTimeout(() => {
-          img.src = originalCat;
-        }, 5000);
-      } else {
-        img.style.left = currentLeft + 10 + 'px';
-      }
+  function moveCat() {
+    const currentLeft = parseInt(imgElement.style.left);
+    const newLeft = currentLeft + 10;
+    let leftPositionOnMiddle = 0;
+    imgElement.style.left = `${newLeft}px`;
+    imageWidth = imgElement.width;
+
+    if (newLeft >= window.innerWidth) {
+      imgElement.style.left = '0px';
+      console.log('Cat is back to the left');
     }
-
-    setInterval(catWalk, 50);
+    if (
+      newLeft >= window.innerWidth / 2 - imageWidth / 2 &&
+      newLeft < window.innerWidth / 2 - imageWidth / 2 + 10
+    ) {
+      imgElement.src = dancingCatUrl;
+      leftPositionOnMiddle = newLeft;
+      console.log('Cat is dancing');
+      clearInterval(catInterval);
+      setTimeout(() => {
+        catInterval = setInterval(moveCat, 50);
+        imgElement.src = walkingCatUrl;
+      }, 5000);
+      console.log('Cat is back to walking');
+      console.log(newLeft);
+    }
   }
-  catWalk();
-});
+}
+window.onload = catWalk;
