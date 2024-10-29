@@ -34,25 +34,21 @@ function catWalk() {
     const currentLeft = parseInt(imgElement.style.left);
     const newLeft = currentLeft + 10;
     imgElement.style.left = `${newLeft}px`;
-    imageWidth = imgElement.width;
+    const halfImageWidth = imgElement.width / 2;
 
     if (newLeft >= window.innerWidth) {
       imgElement.style.left = '0px';
-      console.log('Cat is back to the left');
     }
     if (
-      newLeft >= window.innerWidth / 2 - imageWidth / 2 &&
-      newLeft < window.innerWidth / 2 - imageWidth / 2 + 10
+      newLeft >= window.innerWidth / 2 - halfImageWidth &&
+      newLeft < window.innerWidth / 2 - halfImageWidth + 10
     ) {
       imgElement.src = dancingCatUrl;
-      console.log('Cat is dancing');
       clearInterval(catInterval);
       setTimeout(() => {
         catInterval = setInterval(moveCat, 50);
         imgElement.src = walkingCatUrl;
       }, 5000);
-      console.log('Cat is back to walking');
-      console.log(newLeft);
     }
   }
 }
