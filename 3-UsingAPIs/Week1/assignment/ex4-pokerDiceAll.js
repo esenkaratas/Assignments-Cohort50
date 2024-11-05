@@ -24,12 +24,13 @@ exercise file.
 
 // The line below makes the rollDie() function available to this file.
 // Do not change or remove it.
-const rollDie = require('../../helpers/pokerDiceRoller');
+//const rollDie = require('../../helpers/pokerDiceRoller'); => This line throws an error in the console, so I imported the function instead of requiring it.
+import { rollDie } from '../../helpers/pokerDiceRoller.js';
 
 export function rollDice() {
-  // TODO Refactor this function
   const dice = [1, 2, 3, 4, 5];
-  return rollDie(1);
+  const dicePromises = dice.map((dice) => rollDie(dice));
+  return Promise.all(dicePromises);
 }
 
 function main() {
@@ -42,3 +43,7 @@ function main() {
 if (process.env.NODE_ENV !== 'test') {
   main();
 }
+
+/* Explanation: When a promise is rejected, the dice that haven't finished rolling keep going because promises in JavaScript start right away. 
+This means that once a promise is made, it begins working immediately, even if we don't wait for it. 
+So, even if one promise fails, the other promises keep working until they finish or fail. */
