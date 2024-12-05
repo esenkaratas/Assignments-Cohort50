@@ -25,11 +25,13 @@ export function rollDie() {
       // Use reject to notify that the die rolled off the table after 6 rolls
       if (roll > 6) {
         reject(new Error('Oops... Die rolled off the table.'));
+        return;
       }
 
       // Use resolve to communicate the final die value once finished rolling
       if (roll === randomRollsToDo) {
         resolve(value);
+        return;
       }
 
       // Schedule the next roll todo until no more rolls to do

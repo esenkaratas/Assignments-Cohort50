@@ -8,10 +8,10 @@
     ✅ `resolve()` should be called with a one argument
     ✅ `reject()` should be called with a one argument
     ✅ should resolve when the die settles successfully (1 ms)
-    ✅ should reject with an Error when the die rolls off the table (1 ms)
+    ✅ should reject with an Error when the die rolls off the table
 
 Test Suites: 1 passed, 1 total
 Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        0.342 s
-Ran all test suites matching /\/Users\/Esen\/Assignments-Cohort50\/.dist\/3-UsingAPIs\/Week1\/unit-tests\/ex3-rollDie.test.js/i.
+Time:        0.719 s
+Ran all test suites matching /\/Users\/Esen\/code\/hyf\/Assignments-Cohort50\/.dist\/3-UsingAPIs\/Week1\/unit-tests\/ex3-rollDie.test.js/i.
